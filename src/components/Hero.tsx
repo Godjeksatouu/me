@@ -1,11 +1,9 @@
 // src/components/Hero.tsx
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ProfileCircle from "./ProfileCircle"; // relative import
 
 const Hero = () => {
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,11 +24,8 @@ const Hero = () => {
     },
   };
 
-<ProfileCircle imageSrc="/images/me.png" itemVariants={itemVariants} />
-
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Background gradient effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse delay-700" />
@@ -43,10 +38,6 @@ const Hero = () => {
           animate="visible"
           className="max-w-4xl mx-auto text-center"
         >
-          {/* Avatar */}
-          <ProfileCircle imageSrc="/images/me.png" itemVariants={itemVariants} />
-
-          {/* Name & Title */}
           <motion.h1
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold mb-4"
@@ -76,7 +67,6 @@ const Hero = () => {
             Specialized in full-stack solutions from POS systems to inventory management.
           </motion.p>
 
-          {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
             className="flex flex-wrap items-center justify-center gap-4 mb-12"
@@ -88,16 +78,12 @@ const Hero = () => {
             >
               <a href="#projects">View Projects</a>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-            >
+
+            <Button size="lg" variant="outline" asChild>
               <a href="#contact">Contact Me</a>
             </Button>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div
             variants={itemVariants}
             className="flex items-center justify-center gap-4"
@@ -110,6 +96,7 @@ const Hero = () => {
             >
               <Instagram className="w-6 h-6" />
             </a>
+
             <a
               href="https://github.com/Godjeksatouu"
               target="_blank"
@@ -118,6 +105,7 @@ const Hero = () => {
             >
               <Github className="w-6 h-6" />
             </a>
+
             <a
               href="https://ma.linkedin.com/in/mohamedamine-satou-469b20221"
               target="_blank"
@@ -127,7 +115,6 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
           </motion.div>
-
         </motion.div>
       </div>
     </section>
