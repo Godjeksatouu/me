@@ -1,6 +1,6 @@
 # Mohamedamine Satou - Portfolio
 
-![Portfolio Screenshot](public/images/portfolio-screenshot.png) <!-- optional screenshot -->
+![Portfolio Screenshot](public/images/screen.png) <!-- optional screenshot -->
 
 ## About Me
 
